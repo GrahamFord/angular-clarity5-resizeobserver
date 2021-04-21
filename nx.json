@@ -1,0 +1,16 @@
+{
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
+  },
+  "affected": { "defaultBase": "master" },
+  "npmScope": "jest-test",
+  "projects": {
+    "jest-test": { "tags": [] },
+    "jest-test-e2e": { "tags": [], "implicitDependencies": ["jest-test"] }
+  }
+}

@@ -1,0 +1,30 @@
+<body cds-text="body">
+  <main cds-layout="vertical gap:sm p:lg">
+    <p i18n>
+      Core Select
+    </p>
+    <form [formGroup]="myForm" (ngSubmit)="saveForm()">
+      <cds-select>
+        <label i18n>Colours</label>
+        <select formControlName="dropdown">
+          <ng-container *ngFor="let colour of myOptions">
+            <option value="colour">{{ colour }}</option>
+          </ng-container>
+        </select>
+      </cds-select>
+      <button class="btn btn-primary" type="submit" [disabled]="myOptions.length < 2">Submit</button>
+    </form>
+
+    <p>Angular Select</p>
+    <form clrForm>
+      <clr-select-container>
+        <label>Number options</label>
+        <select clrSelect name="options">
+          <option value="one">One</option>
+          <option value="two">Two</option>
+          <option value="three">Three</option>
+        </select>
+      </clr-select-container>
+    </form>
+  </main>
+</body>
