@@ -1,5 +1,9 @@
 import { TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CdsModule } from '@cds/angular';
+import { ClarityModule } from '@clr/angular';
 import { AppComponent } from './app.component';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -7,6 +11,11 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [
+        CdsModule,
+        ClarityModule,
+        ReactiveFormsModule,
+      ]
     }).compileComponents();
   });
 
@@ -14,18 +23,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'jest-test'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('jest-test');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('jest-test app is running!');
   });
 });
