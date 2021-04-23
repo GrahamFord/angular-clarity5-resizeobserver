@@ -4,15 +4,24 @@
       Core Select
     </p>
     <form [formGroup]="myForm" (ngSubmit)="saveForm()">
-      <cds-select>
-        <label i18n>Colours</label>
-        <select formControlName="dropdown">
-          <ng-container *ngFor="let colour of myOptions">
-            <option value="colour">{{ colour }}</option>
-          </ng-container>
-        </select>
-      </cds-select>
-      <button class="btn btn-primary" type="submit" [disabled]="myOptions.length < 2">Submit</button>
+      <div cds-layout="horizontal gap:md">
+
+        <div>
+          <cds-select>
+            <label i18n>Colours</label>
+            <select formControlName="dropdown">
+              <ng-container *ngFor="let colour of myOptions">
+                <option value="colour">{{ colour }}</option>
+              </ng-container>
+            </select>
+          </cds-select>
+        </div>
+
+        <div>
+          <cds-button type="submit" [disabled]="myOptions.length < 2">Submit</cds-button>
+        </div>
+
+      </div>
     </form>
 
     <p>Angular Select</p>

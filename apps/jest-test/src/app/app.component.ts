@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import '@cds/core/forms/register.js';
-import '@cds/core/checkbox/register.js';
-import '@cds/core/input/register.js';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { of, ReplaySubject } from 'rxjs';
+import '@cds/core/button/register.js';
+import '@cds/core/checkbox/register.js';
+import '@cds/core/forms/register.js';
+import '@cds/core/input/register.js';
+import { ReplaySubject } from 'rxjs';
 import { delay, take, tap } from 'rxjs/operators';
 
 @Component({

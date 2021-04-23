@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
-import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CdsModule } from '@cds/angular';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ClarityModule } from '@clr/angular';
+import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
